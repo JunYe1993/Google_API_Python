@@ -56,9 +56,6 @@ def main():
     with open('output.json', 'w+', encoding='utf-8') as f:
         json_object = json.dumps(posts, indent = 4, ensure_ascii=False)
         f.write(json_object)
-        print(json_object)
-        # js = json.loads(format(posts))
-        # json.dump(js, f, ensure_ascii=False, indent=4) 
 
 if __name__ == '__main__':
     main()
