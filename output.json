@@ -1,0 +1,98 @@
+{
+    "kind": "blogger#postList",
+    "nextPageToken": "CgkIAxjD6bLfii8Qmtyl4cCv4qdA",
+    "items": [
+        {
+            "kind": "blogger#post",
+            "id": "5078372173093082126",
+            "blog": {
+                "id": "4634073707460521498"
+            },
+            "published": "2021-04-11T19:14:00+08:00",
+            "updated": "2021-04-11T19:14:55+08:00",
+            "url": "http://junye1993.blogspot.com/2021/04/jquery-document-ready.html",
+            "selfLink": "https://blogger.googleapis.com/v3/blogs/4634073707460521498/posts/5078372173093082126",
+            "title": "JQuery - $( document ).ready()",
+            "content": "<div class=\"separator\" style=\"clear: both;text-align: center;\">\n <a style=\"margin-left: 1em;margin-right: 1em;\">\n  <img alt=\"'ProgrammerLife.jpg'\" border=\"0\" data-original-height=\"1365\" data-original-width=\"2048\" height=\"426\" src=\"https://junye1993.github.io/image/ProgrammerLife.jpg\"/>\n </a>\n</div>\n<h2 style=\"background-color: #e6edeb;border-left: 5px solid rgb(2, 180, 206);box-sizing: border-box;font-size: large;letter-spacing: 1.44px;line-height: 1.6em;margin: 16px 0px 24px;padding: 10px 10px 10px 18px;text-align: justify;\">\n JQuery - $( document ).ready()\n</h2>\n<pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;\"><font face=\"helvetica\" size=\"4\">鑒於 $( document ).ready() 有縮寫，導致初學者如我看不懂，這裡紀錄一下。</font></pre>\n<ul>\n <li>\n  <pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;\"><font face=\"helvetica\" size=\"4\" style=\"background-color: #fff7e9;\"><b><u>基本版本</u></b></font></pre>\n  <pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;\"><font face=\"helvetica\" size=\"4\">$( document ).ready() 基本上是等 Document Object Model ( DOM ) 好了後，可以執行 JavaScript code 時啟動。另外常見的 $( window ).on( \"load\", function() { ... }) 則是等整個文件都處理完畢後 ( 包含 image, iframe...等等 ) 才執行，而非只有 DOM。</font></pre>\n  <pre><code class=\"language-javascript\" style=\"width: 95%;\">    // A $( document ).ready() block.\n    $( document ).ready(function() {\n        console.log( \"ready!\" );\n    });</code></pre>\n </li>\n <li>\n  <pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;\"><font face=\"helvetica\" size=\"4\" style=\"background-color: #fff7e9;\"><b><u>縮寫版本</u></b></font></pre>\n  <pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;\"><font face=\"helvetica\" size=\"4\">老練的開發者會寫 $() 代替 $( document ).ready()，但最好不要。</font></pre>\n  <pre><code class=\"language-javascript\" style=\"width: 95%;\">    // Shorthand for $( document ).ready()\n    $(function() {\n        console.log( \"ready!\" );\n    });</code></pre>\n </li>\n</ul>\n<pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;margin-top: 36px;\"><font face=\"helvetica\" size=\"4.5\">參考資料 :</font></pre>\n<pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;\"><font face=\"helvetica\" size=\"4.5\">1.<a href=\"https://learn.jquery.com/using-jquery-core/document-ready/\">JQuery_Doc</a></font></pre>",
+            "author": {
+                "id": "05770811013053161611",
+                "displayName": "JunYe",
+                "url": "https://www.blogger.com/profile/05770811013053161611",
+                "image": {
+                    "url": "//2.bp.blogspot.com/-93l1pzIdJdw/YFxxb0Zo5oI/AAAAAAAACsE/3LvUzvu9gNM-PWztkFGRAyJbqORlql69ACK4BGAYYCw/s35/james-harrison-vpOeXr5wmR4-unsplash.jpg"
+                }
+            },
+            "replies": {
+                "totalItems": "0",
+                "selfLink": "https://blogger.googleapis.com/v3/blogs/4634073707460521498/posts/5078372173093082126/comments"
+            },
+            "labels": [
+                "程式",
+                "網站開發",
+                "Javascript"
+            ],
+            "etag": "\"dGltZXN0YW1wOiAxNjE4MTM5Njk1ODc3Cm9mZnNldDogMjg4MDAwMDAK\""
+        },
+        {
+            "kind": "blogger#post",
+            "id": "6414362765307112382",
+            "blog": {
+                "id": "4634073707460521498"
+            },
+            "published": "2021-04-11T18:47:00+08:00",
+            "updated": "2021-04-11T18:47:27+08:00",
+            "url": "http://junye1993.blogspot.com/2021/04/python-error-unicodedecodeerror-cp950.html",
+            "selfLink": "https://blogger.googleapis.com/v3/blogs/4634073707460521498/posts/6414362765307112382",
+            "title": "Python Error - UnicodeDecodeError: 'cp950' codec can't decode",
+            "content": "<div class=\"separator\" style=\"clear: both;text-align: center;\">\n <a style=\"margin-left: 1em;margin-right: 1em;\">\n  <img alt=\"'ProgrammerLife.jpg'\" border=\"0\" data-original-height=\"1365\" data-original-width=\"2048\" height=\"426\" src=\"https://junye1993.github.io/image/ProgrammerLife.jpg\"/>\n </a>\n</div>\n<h2 style=\"background-color: #e6edeb;border-left: 5px solid rgb(2, 180, 206);box-sizing: border-box;font-size: large;letter-spacing: 1.44px;line-height: 1.6em;margin: 16px 0px 24px;padding: 10px 10px 10px 18px;text-align: justify;\">\n 讀檔時 UnicodeDecodeError: 'cp950' codec can't decode\n</h2>\n<pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;\"><font face=\"helvetica\" size=\"4\">老實說這非常常見，即使你的檔案是用 UTF-8 編寫，而且用 Python3 ( 絕大部分 default 是 utf-8 )，仍會報這個錯。所以要避免程式能在不同平台都能正常使用，讀檔時最好都加上 encoding=\"utf-8\"</font></pre>\n<pre><code class=\"language-python\">    with open(\"somefile.py\", encoding=\"utf-8\") as f:\n        f.read()</code></pre>\n<pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;margin-top: 36px;\"><font face=\"helvetica\" size=\"4.5\">參考資料 :</font></pre>\n<pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;\"><font face=\"helvetica\" size=\"4.5\">1.<a href=\"https://stackoverflow.com/questions/49021589/how-do-i-fix-this-cp950-illegal-multibyte-sequence-unicodedecodeerror-when-rea\">stackoverflow</a></font></pre>",
+            "author": {
+                "id": "05770811013053161611",
+                "displayName": "JunYe",
+                "url": "https://www.blogger.com/profile/05770811013053161611",
+                "image": {
+                    "url": "//2.bp.blogspot.com/-93l1pzIdJdw/YFxxb0Zo5oI/AAAAAAAACsE/3LvUzvu9gNM-PWztkFGRAyJbqORlql69ACK4BGAYYCw/s35/james-harrison-vpOeXr5wmR4-unsplash.jpg"
+                }
+            },
+            "replies": {
+                "totalItems": "0",
+                "selfLink": "https://blogger.googleapis.com/v3/blogs/4634073707460521498/posts/6414362765307112382/comments"
+            },
+            "labels": [
+                "程式",
+                "Python"
+            ],
+            "etag": "\"dGltZXN0YW1wOiAxNjE4MTM4MDQ3NjM1Cm9mZnNldDogMjg4MDAwMDAK\""
+        },
+        {
+            "kind": "blogger#post",
+            "id": "3741413071428104014",
+            "blog": {
+                "id": "4634073707460521498"
+            },
+            "published": "2021-04-07T18:42:00+08:00",
+            "updated": "2021-04-11T18:29:49+08:00",
+            "url": "http://junye1993.blogspot.com/2021/04/python-beautifulsoup-2.html",
+            "selfLink": "https://blogger.googleapis.com/v3/blogs/4634073707460521498/posts/3741413071428104014",
+            "title": "Python - BeautifulSoup 基本應用 (2)",
+            "content": "<div class=\"separator\" style=\"clear: both;text-align: center;\">\n <a style=\"margin-left: 1em;margin-right: 1em;\">\n  <img alt=\"'ProgrammerLife.jpg'\" border=\"0\" data-original-height=\"1365\" data-original-width=\"2048\" height=\"426\" src=\"https://junye1993.github.io/image/ProgrammerLife.jpg\"/>\n </a>\n</div>\n<h2 style=\"background-color: #e6edeb;border-left: 5px solid rgb(2, 180, 206);box-sizing: border-box;font-size: large;letter-spacing: 1.44px;line-height: 1.6em;margin: 16px 0px 24px;padding: 10px 10px 10px 18px;text-align: justify;\">\n Navigating the tree - Going down\n</h2>\n<ul>\n <li>\n  <pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;\"><font face=\"helvetica\" size=\"4\" style=\"background-color: #fff7e9;\"><b><u>child Tag</u></b></font></pre>\n  <pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;\"><font face=\"helvetica\" size=\"4\">前一篇呼叫 Tag 底下的 subTag 是用像 class 的方式 (Tag.subTag)，沒完整說明的是這個 subTag 可呼叫到的範圍並不只侷限 children Tag，而是整個 Tag 底下第一個遇到的 Tag.name == subTag。</font></pre>\n  <pre><code class=\"language-python\" style=\"width: 95%;\">    \"\"\" html\n    &lt;b class=\"boldest\" id=\"bold man\"&gt;\n        &lt;u&gt;Extremely bold&lt;/u&gt;\n    &lt;/b&gt;\n    &lt;p&gt;Just a paragraph&lt;/p&gt;\n    \"\"\"\n    soup = BeautifulSoup(html, 'html.parser')\n    print(soup.u)  # &lt;u&gt;Extremely bold&lt;/u&gt;</code></pre>\n </li>\n <li>\n  <pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;\"><font face=\"helvetica\" size=\"4\" style=\"background-color: #fff7e9;\"><b><u>find_all()</u></b></font></pre>\n  <pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;\"><font face=\"helvetica\" size=\"4\">依循前面的 subTag 找法，find_all 則會找出所有的 Tag (Tag.name == subTag)。</font></pre>\n  <pre><code class=\"language-python\" style=\"width: 95%;\">    soup.find_all('a')\n    # [&lt;a class=\"sister\" href=\"http://example.com/elsie\" id=\"link1\"&gt;Elsie&lt;/a&gt;,\n    #  &lt;a class=\"sister\" href=\"http://example.com/lacie\" id=\"link2\"&gt;Lacie&lt;/a&gt;,\n    #  &lt;a class=\"sister\" href=\"http://example.com/tillie\" id=\"link3\"&gt;Tillie&lt;/a&gt;]</code></pre>\n </li>\n <li>\n  <pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;\"><font face=\"helvetica\" size=\"4\" style=\"background-color: #fff7e9;\"><b><u>.contents</u></b></font></pre>\n  <pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;\"><font face=\"helvetica\" size=\"4\">Tag.contents 回傳包含所有 child string 的 list。</font></pre>\n  <pre><code class=\"language-python\" style=\"width: 95%;\">    print(soup.contents)  # [&lt;d class=\"car\"&gt;&lt;u&gt;Extremely bold.&lt;/u&gt;&lt;/d&gt;, &lt;p&gt;123&lt;/p&gt;]</code></pre>\n </li>\n <li>\n  <pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;\"><font face=\"helvetica\" size=\"4\" style=\"background-color: #fff7e9;\"><b><u>.children</u></b></font></pre>\n  <pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;\"><font face=\"helvetica\" size=\"4\">Tag.children 回傳包含所有 child Tag object 的 list。</font></pre>\n  <pre><code class=\"language-python\" style=\"width: 95%;\">    for child in soup.children:\n        print(child.name)\n    # b\n    # p</code></pre>\n </li>\n <li>\n  <pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;\"><font face=\"helvetica\" size=\"4\" style=\"background-color: #fff7e9;\"><b><u>.descendants</u></b></font></pre>\n  <pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;\"><font face=\"helvetica\" size=\"4\">回傳一個不只包含 Tag 底下一層的 subTag，而是整個 tree 上所有 object。底下的結果之所以會有 None，是因為 NavigableString 也是 child 的包含範圍 ( .contents 跟 .children 也一樣 )，而 NavigableString object 沒有 .name。</font></pre>\n  <pre><code class=\"language-python\" style=\"width: 95%;\">    for child in soup.descendants:\n        print(child.name)\n    # b\n    # u\n    # None\n    # p\n    # None</code></pre>\n </li>\n <li>\n  <pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;\"><font face=\"helvetica\" size=\"4\" style=\"background-color: #fff7e9;\"><b><u>.string</u></b></font></pre>\n  <pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;\"><font face=\"helvetica\" size=\"4\">回傳底下唯一一個的 NavigableString 。如果 Tag 只有一個 child 而且還是 NavigableString 則回傳。如果 Tag 只有一個 child 且 child 也只有一個 NavigableString child 也是回傳。如果有兩個以上的 NavigableString 則要呼叫 .strings，.string 會回傳 None。</font></pre>\n  <pre><code class=\"language-python\" style=\"width: 95%;\">    print(soup.u.string) # Extremely bold\n    print(soup.b.string) # Extremely bold\n    print(soup.string)   # None</code></pre>\n </li>\n <li>\n  <pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;\"><font face=\"helvetica\" size=\"4\" style=\"background-color: #fff7e9;\"><b><u>.strings &amp; .stripped_strings</u></b></font></pre>\n  <pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;\"><font face=\"helvetica\" size=\"4\">strings 會回傳所有 NavigableString。但這種情況下仍會紀錄到一些換行或字串前後的空格，所以可以用 stripped_strings 回傳乾淨的 NavigableString list。(如果整個字串都是空格或換行，則這個 NavigableString 會被無視)</font></pre>\n  <pre><code class=\"language-python\" style=\"width: 95%;\">    for sstr in soup.strings:\n        print(repr(sstr))\n    # 'Extremely bold'\n    # 'Just a paragraph' </code></pre>\n </li>\n</ul>\n<h2 style=\"background-color: #e6edeb;border-left: 5px solid rgb(2, 180, 206);box-sizing: border-box;font-size: large;letter-spacing: 1.44px;line-height: 1.6em;margin: 36px 0px 24px;padding: 10px 10px 10px 18px;text-align: justify;\">\n Navigating the tree - Going Up\n</h2>\n<ul>\n <li>\n  <pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;\"><font face=\"helvetica\" size=\"4\" style=\"background-color: #fff7e9;\"><b><u>.parent &amp; .parents</u></b></font></pre>\n  <pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;\"><font face=\"helvetica\" size=\"4\">基本上就是往上一層的 Tag (Soup 的 parent 為 None)。</font></pre>\n  <pre><code class=\"language-python\" style=\"width: 95%;\">    link = soup.a\n    link\n    # &lt;a class=\"sister\" href=\"http://example.com/elsie\" id=\"link1\"&gt;Elsie&lt;/a&gt;\n    for parent in link.parents:\n        print(parent.name)\n    # p\n    # body\n    # html\n    # [document]</code></pre>\n </li>\n</ul>\n<h2 style=\"background-color: #e6edeb;border-left: 5px solid rgb(2, 180, 206);box-sizing: border-box;font-size: large;letter-spacing: 1.44px;line-height: 1.6em;margin: 36px 0px 24px;padding: 10px 10px 10px 18px;text-align: justify;\">\n Navigating the tree - Going sideways\n</h2>\n<ul>\n <li>\n  <pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;\"><font face=\"helvetica\" size=\"4\" style=\"background-color: #fff7e9;\"><b><u>.next_sibling &amp;.previous_sibling</u></b></font></pre>\n  <pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;\"><font face=\"helvetica\" size=\"4\">往前找跟往後找，但是要注意的是他沒那方便幫你找到下一個或上一個的 Tag object，絕大部分都是 NavigableString，例如換行 (\\n) 之類的。</font></pre>\n  <pre><code class=\"language-python\" style=\"width: 95%;\">    tag1 = soup.b\n    tag2 = soup.p\n    print(tag1.next_sibling)     # &lt;p&gt;123&lt;/p&gt;\n    print(tag2.previous_sibling) # &lt;b class=\"boldest\" id=\"bold man\"&gt;&lt;u&gt;Extremely bold&lt;/u&gt;&lt;/b&gt;</code></pre>\n </li>\n</ul>\n<pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;margin-top: 36px;\"><font face=\"helvetica\" size=\"4.5\">參考資料 :</font></pre>\n<pre style=\"white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;\"><font face=\"helvetica\" size=\"4.5\">1.<a href=\"https://www.crummy.com/software/BeautifulSoup/bs4/doc/\">Beautiful Soup 4.9.0 documentation</a></font></pre>",
+            "author": {
+                "id": "05770811013053161611",
+                "displayName": "JunYe",
+                "url": "https://www.blogger.com/profile/05770811013053161611",
+                "image": {
+                    "url": "//2.bp.blogspot.com/-93l1pzIdJdw/YFxxb0Zo5oI/AAAAAAAACsE/3LvUzvu9gNM-PWztkFGRAyJbqORlql69ACK4BGAYYCw/s35/james-harrison-vpOeXr5wmR4-unsplash.jpg"
+                }
+            },
+            "replies": {
+                "totalItems": "0",
+                "selfLink": "https://blogger.googleapis.com/v3/blogs/4634073707460521498/posts/3741413071428104014/comments"
+            },
+            "labels": [
+                "程式",
+                "Python"
+            ],
+            "etag": "\"dGltZXN0YW1wOiAxNjE4MTM2OTg5Njk1Cm9mZnNldDogMjg4MDAwMDAK\""
+        }
+    ],
+    "etag": "\"MjAyMS0wNC0xMVQxMjoxMTo0My4xODZa\""
+}
