@@ -5,13 +5,13 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 
-import sys
+
 import json
 # If modifying these scopes, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/blogger']
 BLOGID = 4634073707460521498
 
-def getCredentials () -> Credentials:
+def getCredentials ():
     
     creds = None
     # The file token.json stores the user's access and refresh tokens, and is
@@ -33,27 +33,25 @@ def getCredentials () -> Credentials:
 
     return creds
 
-def getBody(post, data=None) -> dict:
-    for key in data:
-        post[key] = data[key]
-    return post
-
-def run(data=None):
-    if len(sys.argv) > 1:
-        with open(sys.argv[1], 'r') as f:
-            data = json.load(f)
-            print(json.dumps(data, indent=4))
-            quit()
+def run():
 
     # Get service
     creds = getCredentials()
     service = build('blogger', 'v3', credentials=creds)
 
+    """
+    You can just use Insert instead of Insert, Update & Publish 
+    Example:
+        service.posts().insert(blogId=BLOGID, body=body).execute()
+    """
     # Create a new draft post.
+    # The return value (newpost) is dict contain all info of this draft
     newpost = service.posts().insert(blogId=BLOGID, isDraft=True).execute()
 
-    # Update content of the new draft post with data.
-    JsonPost = json.dumps(getBody(newpost, data), indent=4, ensure_ascii=False)
+    # Update some content of the new draft post.
+    newpost['title'] = "posted via python"
+    newpost['content'] = "<div>hello world test</div>"
+    JsonPost = json.dumps(newpost, indent=4, ensure_ascii=False)
     service.posts().update(blogId=BLOGID, postId=newpost['id'], 
         body=json.loads(JsonPost)).execute()
 
