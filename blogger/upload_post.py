@@ -42,8 +42,6 @@ def run(data=None):
     if len(sys.argv) > 1:
         with open(sys.argv[1], 'r') as f:
             data = json.load(f)
-            print(json.dumps(data, indent=4))
-            quit()
 
     # Get service
     creds = getCredentials()
