@@ -10,6 +10,8 @@ import json
 # If modifying these scopes, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/blogger']
 BLOGID = 4634073707460521498
+CLIENT_SECRETS = "client_secrets.json"
+CLIENT_TOKEN = "token.json"
 
 def getCredentials () -> Credentials:
     
@@ -17,18 +19,18 @@ def getCredentials () -> Credentials:
     # The file token.json stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
     # time.
-    if os.path.exists('token.json'):
-        creds = Credentials.from_authorized_user_file('token.json', SCOPES)
+    if os.path.exists(CLIENT_TOKEN):
+        creds = Credentials.from_authorized_user_file(CLIENT_TOKEN, SCOPES)
 
     # If there are no (valid) credentials available, let the user log in.
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
-            flow = InstalledAppFlow.from_client_secrets_file('client_secrets.json', SCOPES)
+            flow = InstalledAppFlow.from_client_secrets_file(CLIENT_SECRETS, SCOPES)
             creds = flow.run_local_server(port=0)
         # Save the credentials for the next run
-        with open('token.json', 'w') as token:
+        with open(CLIENT_TOKEN, 'w', encoding='utf-8') as token:
             token.write(creds.to_json())
 
     return creds
@@ -39,8 +41,12 @@ def getBody(post, data=None) -> dict:
     return post
 
 def run(data=None):
-    if len(sys.argv) > 1:
-        with open(sys.argv[1], 'r') as f:
+    if len(sys.argv) > 3:
+        global CLIENT_SECRETS, CLIENT_TOKEN
+        env = sys.argv[1] + "/"
+        CLIENT_SECRETS = env + CLIENT_SECRETS
+        CLIENT_TOKEN = env + CLIENT_TOKEN
+        with open(sys.argv[2], 'r', encoding='utf-8') as f:
             data = json.load(f)
 
     # Get service
