@@ -41,7 +41,7 @@ def getBody(post, data=None) -> dict:
     return post
 
 def run(data=None):
-    if len(sys.argv) > 3:
+    if len(sys.argv) > 2:
         global CLIENT_SECRETS, CLIENT_TOKEN
         env = sys.argv[1] + "/"
         CLIENT_SECRETS = env + CLIENT_SECRETS
