@@ -7,14 +7,17 @@ from google.oauth2.credentials import Credentials
 
 import sys
 import json
+import pathlib
+
+ROOT_PATH = os.path.dirname(pathlib.Path(__file__).parent.absolute())
 # If modifying these scopes, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/blogger']
 BLOGID = 4634073707460521498
-CLIENT_SECRETS = "client_secrets.json"
-CLIENT_TOKEN = "token.json"
+CLIENT_SECRETS = ROOT_PATH + "/client_secrets.json"
+CLIENT_TOKEN = ROOT_PATH + "/token.json"
 
 def getCredentials () -> Credentials:
-    
+
     creds = None
     # The file token.json stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
@@ -40,29 +43,33 @@ def getBody(post, data=None) -> dict:
         post[key] = data[key]
     return post
 
-def run(data=None):
-    if len(sys.argv) > 2:
-        global CLIENT_SECRETS, CLIENT_TOKEN
-        env = sys.argv[1] + "/"
-        CLIENT_SECRETS = env + CLIENT_SECRETS
-        CLIENT_TOKEN = env + CLIENT_TOKEN
-        with open(sys.argv[2], 'r', encoding='utf-8') as f:
-            data = json.load(f)
+def getPost (data, service):
+    # post id exist both blogger and local
+    try:
+        return service.posts().get(blogId=BLOGID, postId=data['id']).execute()
+    except:
+        return service.posts().insert(blogId=BLOGID, isDraft=True).execute()
 
+def run(data=None):
     # Get service
     creds = getCredentials()
     service = build('blogger', 'v3', credentials=creds)
 
-    # Create a new draft post.
-    newpost = service.posts().insert(blogId=BLOGID, isDraft=True).execute()
+    # Get post refers to data['id']. if it refers to none then creat new one.
+    post = getPost(data, service)
 
-    # Update content of the new draft post with data.
-    JsonPost = json.dumps(getBody(newpost, data), indent=4, ensure_ascii=False)
-    service.posts().update(blogId=BLOGID, postId=newpost['id'], 
+    # Update content of the draft post with data.
+    JsonPost = json.dumps(getBody(post, data), indent=4, ensure_ascii=False)
+    service.posts().update(blogId=BLOGID, postId=post['id'], 
         body=json.loads(JsonPost)).execute()
 
-    # Publish the new post.
-    service.posts().publish(blogId=BLOGID, postId=newpost['id']).execute()
+    # Publish the post.
+    service.posts().publish(blogId=BLOGID, postId=post['id']).execute()
+    return post['id']    
 
 if __name__ == '__main__':
-    run()
+    if len(sys.argv) > 1:
+        with open(sys.argv[1], 'r', encoding='utf-8') as f:
+            sys.stdout.write(run(json.load(f)))
+    else:
+        sys.stdout.write(run())
