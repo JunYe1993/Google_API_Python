@@ -36,6 +36,14 @@
     <your-env>/bin/pip install google-api-python-client
 ```
 
+``` bash
+    # windows (2022/09/25 note)
+    pip install virtualenv
+    python -m virtualenv <your-env>
+    <your-env>\Scripts\activate
+    <your-env>\Scripts\pip.exe install google-api-python-client
+```
+
 - **安裝 google_auth_oauthlib**
 
     再來安裝 [Oauth 2.0][Google_API_Oauth_Git]。
@@ -50,7 +58,7 @@
 
 - **Sample Code - flow**
 
-    這是 [Google Oauth API Scope][Google_API_Oauth_Scope] 我拿 blogger 做測試。完整的程式碼在 [sample.py](/sample.py)，輸出結果在 [output.json](/output.json)。這裡擷取片段，順序還要參考完整的程式碼。 
+    這是 [Google Oauth API Scope][Google_API_Oauth_Scope] 我拿 blogger 做測試。完整的程式碼在 [sample.py](/sample.py)，輸出結果在 [output.json](/output.json)。這裡擷取片段，順序還要參考完整的程式碼。
 
 ``` python
     # 首先是連線設置，Flow 這個 class 是用來讀取你的 Credentials 來認證你的程式。
